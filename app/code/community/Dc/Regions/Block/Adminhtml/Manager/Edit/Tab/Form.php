@@ -34,7 +34,7 @@ class Dc_Regions_Block_Adminhtml_Manager_Edit_Tab_Form extends Mage_Adminhtml_Bl
         
         $fieldset->addField('code', 'text', array(
             'label'     => Mage::helper('regions')->__('Code'),
-            'class'     => 'required-entry validate-length maximum-length-3 minimum-length-1',
+            'class'     => 'required-entry region-code',
             'required'  => true,
             'name'      => 'code',
             'note'      => Mage::helper('regions')->__('The code must have between 1 and 32 characters')

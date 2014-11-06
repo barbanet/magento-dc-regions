@@ -38,5 +38,8 @@
     </regions_adminhtml_manager_grid>
     <regions_adminhtml_manager_edit>
         <update handle="regions_default" />
+        <reference name="head">
+            <action method="addItem"><type>skin_js</type><name>dc/regions/js/validation.js</name></action>
+        </reference>
     </regions_adminhtml_manager_edit>
 </layout>
