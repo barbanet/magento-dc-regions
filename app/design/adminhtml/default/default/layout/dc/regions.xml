@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Dc_Regions
+ * 
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ *
+ * @category   Dc
+ * @package    Dc_Regions
+ * @copyright  Copyright (c) 2014 Damián Culotta. (http://www.damianculotta.com.ar/)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<layout>
+    <regions_default>
+        <reference name="head">
+            <action method="setTitle" translate="title">
+                <title>Regions Manager</title>
+            </action>
+            <action method="addCss"><name>dc/regions/css/style.css</name></action>
+        </reference>
+    </regions_default>
+    <regions_adminhtml_manager_index>
+        <update handle="regions_default" />
+        <reference name="content">
+            <block type="regions/adminhtml_manager" name="manager" />
+        </reference>
+    </regions_adminhtml_manager_index>
+    <regions_adminhtml_manager_grid>
+        <update handle="regions_default" />
+        <block type="core/text_list" name="root" output="toHtml">
+            <block type="regions/adminhtml_manager_grid" name="regions_manager_grid" />
+        </block>
+    </regions_adminhtml_manager_grid>
+    <regions_adminhtml_manager_edit>
+        <update handle="regions_default" />
+    </regions_adminhtml_manager_edit>
+</layout>
