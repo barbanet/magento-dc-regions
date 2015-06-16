@@ -18,20 +18,9 @@
 <config>
     <modules>
         <Dc_Regions>
-            <version>0.2.0</version>
+            <version>0.3.0</version>
         </Dc_Regions>
     </modules>
-    <admin>
-        <routers>
-            <regions>
-                <use>admin</use>
-                <args>
-                    <module>Dc_Regions</module>
-                    <frontName>regions</frontName>
-                </args>
-            </regions>
-        </routers>
-    </admin>
     <frontend>
         <layout>
             <updates>
@@ -41,6 +30,17 @@
             </updates>
         </layout>
     </frontend>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Dc_Regions after="Mage_Adminhtml">Dc_Regions_Adminhtml</Dc_Regions>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
     <adminhtml>
 		<translate>
             <modules>

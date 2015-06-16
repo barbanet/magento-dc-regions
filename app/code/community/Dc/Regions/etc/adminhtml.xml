@@ -22,7 +22,7 @@
                 <regions module="regions">
                     <title>Manage Regions</title>
                     <sort_order>54</sort_order>
-                    <action>regions/adminhtml_manager</action>
+                    <action>adminhtml/regions</action>
                 </regions>
             </children>
         </system>
