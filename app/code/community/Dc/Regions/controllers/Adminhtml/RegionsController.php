@@ -17,6 +17,11 @@
 class Dc_Regions_Adminhtml_RegionsController extends Mage_Adminhtml_Controller_Action
 {
 
+    protected function _isAllowed()
+    {
+        return Mage::getSingleton('admin/session')->isAllowed('system/regions');
+    }
+
     protected function _initAction()
     {
         $this->loadLayout()
