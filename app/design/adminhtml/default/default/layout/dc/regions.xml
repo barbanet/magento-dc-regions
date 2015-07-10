@@ -24,22 +24,22 @@
             <action method="addCss"><name>dc/regions/css/style.css</name></action>
         </reference>
     </regions_default>
-    <regions_adminhtml_manager_index>
+    <adminhtml_regions_index>
         <update handle="regions_default" />
         <reference name="content">
             <block type="regions/adminhtml_manager" name="manager" />
         </reference>
-    </regions_adminhtml_manager_index>
-    <regions_adminhtml_manager_grid>
+    </adminhtml_regions_index>
+    <adminhtml_regions_grid>
         <update handle="regions_default" />
         <block type="core/text_list" name="root" output="toHtml">
             <block type="regions/adminhtml_manager_grid" name="regions_manager_grid" />
         </block>
-    </regions_adminhtml_manager_grid>
-    <regions_adminhtml_manager_edit>
+    </adminhtml_regions_grid>
+    <adminhtml_regions_edit>
         <update handle="regions_default" />
         <reference name="head">
             <action method="addItem"><type>skin_js</type><name>dc/regions/js/validation.js</name></action>
         </reference>
-    </regions_adminhtml_manager_edit>
+    </adminhtml_regions_edit>
 </layout>
