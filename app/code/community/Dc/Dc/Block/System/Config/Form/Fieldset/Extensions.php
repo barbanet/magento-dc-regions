@@ -14,10 +14,11 @@
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
-class Dc_Dc_Block_System_Config_Form_Fieldset_Extensions	extends Mage_Adminhtml_Block_System_Config_Form_Fieldset
+class Dc_Dc_Block_System_Config_Form_Fieldset_Extensions extends Mage_Adminhtml_Block_System_Config_Form_Fieldset
 {
 
     protected $_fieldRenderer;
+
     protected $_values;
 
     public function render(Varien_Data_Form_Element_Abstract $element)
