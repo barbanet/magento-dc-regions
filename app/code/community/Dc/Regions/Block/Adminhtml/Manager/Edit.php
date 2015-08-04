@@ -25,6 +25,16 @@ class Dc_Regions_Block_Adminhtml_Manager_Edit extends Mage_Adminhtml_Block_Widge
         $this->_controller = 'adminhtml_manager';
         $this->_updateButton('save', 'label', Mage::helper('regions')->__('Save Region'));
         $this->_updateButton('delete', 'label', Mage::helper('regions')->__('Delete Region'));
+        $this->_addButton('saveandcontinue', array(
+            'label'     => Mage::helper('regions')->__('Save And Continue Edit'),
+            'onclick'   => 'saveAndContinueEdit()',
+            'class'     => 'save',
+        ), -100);
+        $this->_formScripts[] = "
+            function saveAndContinueEdit(){
+                editForm.submit($('edit_form').action+'back/edit/');
+            }
+        ";
     }
 
     public function getHeaderText()
