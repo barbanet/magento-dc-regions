@@ -10,7 +10,7 @@
  *
  * @category   Dc
  * @package    Dc_Regions
- * @copyright  Copyright (c) 2015 Damián Culotta. (http://www.damianculotta.com.ar/)
+ * @copyright  Copyright (c) 2014-2015 Damián Culotta. (http://www.damianculotta.com.ar/)
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
@@ -81,6 +81,7 @@ class Dc_Regions_Block_Adminhtml_Manager_Grid extends Mage_Adminhtml_Block_Widge
         
         $this->addExportType('*/*/exportCsv', Mage::helper('regions')->__('CSV'));
         $this->addExportType('*/*/exportXml', Mage::helper('regions')->__('XML'));
+
         return parent::_prepareColumns();
     }
 

@@ -9,12 +9,8 @@
  *
  * @category   Dc
  * @package    Dc_Regions
- * @copyright  Copyright (c) 2015 Damián Culotta. (http://www.damianculotta.com.ar/)
+ * @copyright  Copyright (c) 2014-2015 Damián Culotta. (http://www.damianculotta.com.ar/)
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
- */
-
-/**
- * Solution copied from http://magento.stackexchange.com/questions/17981/alphabetically-sort-the-state-province-drop-down
  */
 
 RegionUpdater.addMethods({
