@@ -18,7 +18,7 @@
 <config>
     <modules>
         <Dc_Regions>
-            <version>1.0.1</version>
+            <version>1.0.2</version>
         </Dc_Regions>
     </modules>
     <frontend>
@@ -42,7 +42,7 @@
         </routers>
     </admin>
     <adminhtml>
-		<translate>
+        <translate>
             <modules>
                 <Dc_Regions>
                     <files>
@@ -59,8 +59,8 @@
             </updates>
         </layout>
     </adminhtml> 
-	<global>
-	    <blocks>
+    <global>
+        <blocks>
             <regions>
                 <class>Dc_Regions_Block</class>
             </regions>
