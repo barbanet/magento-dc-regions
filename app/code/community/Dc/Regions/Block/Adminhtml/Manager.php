@@ -24,6 +24,16 @@ class Dc_Regions_Block_Adminhtml_Manager extends Mage_Adminhtml_Block_Widget_Gri
         $this->_headerText = Mage::helper('regions')->__('Regions Manager');
         $this->_addButtonLabel = Mage::helper('regions')->__('Add Region');
         parent::__construct();
+        $this->_removeButton('add');
+        $this->_addButton('installer', array(
+            'label'     => Mage::helper('translator')->__('Install Regions'),
+            'onclick'   => 'setLocation(\'' . $this->getUrl('*/*/installer') .'\')',
+        ), 10);
+        $this->_addButton('add', array(
+            'label'     => Mage::helper('translator')->__('Add Region'),
+            'onclick'   => 'setLocation(\'' . $this->getUrl('*/*/new') .'\')',
+            'class'     => 'add',
+        ), 20);
     }
 
 }
