@@ -16,11 +16,11 @@
 
 class Dc_Regions_Model_Installer extends Varien_Object
 {
-
+    protected $_regions = null;
     /**
      * @var array
      */
-    private $valid_countries = array('AR', 'BR');
+    private $valid_countries = array('AR', 'BR','UY');
 
     /**
      * @return array
@@ -29,8 +29,9 @@ class Dc_Regions_Model_Installer extends Varien_Object
     {
         $countries = Mage::getModel('directory/country')->getCollection();
         $options = array();
+
         foreach ($countries as $value) {
-            if (in_array($value->getCountryId(), $this->valid_countries)) {
+            if (in_array($value->getCountryId(), $this->valid_countries) && !$this->_alreadyInstalled($value->getCountryId())) {
                 $options[$value->getCountryId()] = $value->getName();
             }
         }
@@ -38,6 +39,18 @@ class Dc_Regions_Model_Installer extends Varien_Object
         return $options;
     }
 
+    protected function _alreadyInstalled($countryCode){
+
+        if(is_null($this->_regions)){
+            $validCountries = $this->valid_countries;
+            $regions = Mage::getModel('directory/region')->getCollection()->addCountryFilter($validCountries);
+            $this->_regions = $regions;
+        }
+
+        $regionByCode = $this->_regions->getItemsByColumnValue('country_id',$countryCode);
+        return (bool)count($regionByCode)>0;
+
+    }
     /**
      * @param $country_id
      * @return bool
