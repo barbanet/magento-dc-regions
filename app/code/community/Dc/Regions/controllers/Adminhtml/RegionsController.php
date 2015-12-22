@@ -162,4 +162,31 @@ class Dc_Regions_Adminhtml_RegionsController extends Mage_Adminhtml_Controller_A
         $this->loadLayout()->renderLayout();
     }
 
+    public function installerAction()
+    {
+        $this->loadLayout()
+            ->_addContent($this->getLayout()->createBlock('regions/adminhtml_installer'))
+            ->renderLayout();
+    }
+
+    public function installAction()
+    {
+        if ($data = $this->getRequest()->getPost()) {
+            $country_id = $this->getRequest()->getParam('country_id');
+            try {
+                $model = Mage::getModel('regions/installer');
+                $model->runInstall($country_id);
+                Mage::getSingleton('adminhtml/session')->addSuccess(Mage::helper('regions')->__('Regions were successfully installed'));
+                $this->_redirect('*/*/');
+                return;
+            } catch (Exception $e) {
+                Mage::getSingleton('adminhtml/session')->addError($e->getMessage());
+                $this->_redirect('*/*/install');
+                return;
+            }
+        }
+        Mage::getSingleton('adminhtml/session')->addError(Mage::helper('regions')->__('Unable to find Regions for that Country'));
+        $this->_redirect('*/*/');
+    }
+
 }

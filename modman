@@ -7,11 +7,15 @@ app/code/community/Dc/Dc/etc/adminhtml.xml app/code/community/Dc/Dc/etc/adminhtm
 app/code/community/Dc/Regions/Helper/Data.php app/code/community/Dc/Regions/Helper/Data.php
 app/code/community/Dc/Regions/controllers/Adminhtml/RegionsController.php app/code/community/Dc/Regions/controllers/Adminhtml/RegionsController.php
 app/code/community/Dc/Regions/Block/Adminhtml/Manager.php app/code/community/Dc/Regions/Block/Adminhtml/Manager.php
+app/code/community/Dc/Regions/Block/Adminhtml/Installer.php app/code/community/Dc/Regions/Block/Adminhtml/Installer.php
 app/code/community/Dc/Regions/Block/Adminhtml/Manager/Edit/Tab/Form.php app/code/community/Dc/Regions/Block/Adminhtml/Manager/Edit/Tab/Form.php
 app/code/community/Dc/Regions/Block/Adminhtml/Manager/Edit/Tabs.php app/code/community/Dc/Regions/Block/Adminhtml/Manager/Edit/Tabs.php
 app/code/community/Dc/Regions/Block/Adminhtml/Manager/Edit/Form.php app/code/community/Dc/Regions/Block/Adminhtml/Manager/Edit/Form.php
 app/code/community/Dc/Regions/Block/Adminhtml/Manager/Edit.php app/code/community/Dc/Regions/Block/Adminhtml/Manager/Edit.php
 app/code/community/Dc/Regions/Block/Adminhtml/Manager/Grid.php app/code/community/Dc/Regions/Block/Adminhtml/Manager/Grid.php
+app/code/community/Dc/Regions/Model/Countries/Br.php app/code/community/Dc/Regions/Model/Countries/Br.php
+app/code/community/Dc/Regions/Model/Countries/Ar.php app/code/community/Dc/Regions/Model/Countries/Ar.php
+app/code/community/Dc/Regions/Model/Installer.php app/code/community/Dc/Regions/Model/Installer.php
 app/code/community/Dc/Regions/etc/config.xml app/code/community/Dc/Regions/etc/config.xml
 app/code/community/Dc/Regions/etc/adminhtml.xml app/code/community/Dc/Regions/etc/adminhtml.xml
 app/etc/modules/Dc_Regions.xml app/etc/modules/Dc_Regions.xml
@@ -24,6 +28,7 @@ app/locale/es_AR/Dc_Regions.csv app/locale/es_AR/Dc_Regions.csv
 app/locale/es_AR/Dc_Dc.csv app/locale/es_AR/Dc_Dc.csv
 app/design/adminhtml/default/default/layout/dc/regions.xml app/design/adminhtml/default/default/layout/dc/regions.xml
 app/design/adminhtml/default/default/layout/dc/dc.xml app/design/adminhtml/default/default/layout/dc/dc.xml
+app/design/adminhtml/default/default/template/dc/regions/installer.phtml app/design/adminhtml/default/default/template/dc/regions/installer.phtml
 app/design/frontend/base/default/layout/dc/regions.xml app/design/frontend/base/default/layout/dc/regions.xml
 skin/adminhtml/default/default/dc/regions/images/icon_regions.png skin/adminhtml/default/default/dc/regions/images/icon_regions.png
 skin/adminhtml/default/default/dc/regions/css/style.css skin/adminhtml/default/default/dc/regions/css/style.css
